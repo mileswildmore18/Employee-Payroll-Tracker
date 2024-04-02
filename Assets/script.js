@@ -3,9 +3,25 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function () {
+let person = prompt("Employee First Name", "First Name")
+if (person != null) {
+  break;
+} else {
+  let person = prompt("Employee Last Name", "Last Name")
+}
 
-  };
+  
+
   // TODO: Get user input to create and return an array of employee objects
+//prompt users for employee first name - store response in variable
+//prompts user for employee last name - store response in variable
+//prompts users for employee salary - store response in variable
+
+//creates the employee object
+//push employee object to employees array
+//ask if they want to add a new eomployee
+//if yes repeat
+//if no return employees array
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
@@ -33,7 +49,7 @@ const displayEmployees = function(employeesArray) {
 
   // Loop through the employee data and create a row for each employee
   for (let i = 0; i < employeesArray.length; i++) {
-    
+
     // Creating a currentEmployee variabe and setting it to the current employee from employeesArray
     const currentEmployee = employeesArray[i];
 
@@ -60,6 +76,7 @@ const displayEmployees = function(employeesArray) {
   }
 }
 
+//All employees chosen will have their data collected
 const trackEmployeeData = function() {
   const employees = collectEmployees();
 
