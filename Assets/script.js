@@ -3,37 +3,30 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function () {
-  //User input will be the first name, last name and the salary
-  let Employee = {
-  };
+  const allEmployees = [];
+  let decision = true;
+  while (decision) {
+    //User input will be the first name, last name and the salary
+    const firstName = prompt("Enter First Name");
+    const lastName = prompt("Enter Last Name");
+    const Salary = prompt("Enter salary");
+    let Employee = {
+      firstName: firstName,
+      lastName: lastName,
+      salary: Salary
+    };
 
-  //This will prompt for the user to enter their first name
-  let firstName = window.prompt("Employee First Name",);
-  Employee.fName = firstName;
-  console.log(Employee);
-  if (firstName != null || firstName != "") {
-    //This will prompt the user for their last name
-    let lastName = window.prompt("Employee Last Name",);
-    Employee.lName = lastName;
-    console.log(Employee);
-    if (lastName != null || lastName != "") {
-      //This will prompt for their salary
-      let salary = window.prompt("Employee Salary",);
-      Employee.sal = salary;
-      console.log(Employee);
-      if (salary != null || salary != "") {
-        //This will prompt is the user wants to add another employee
-        let decision = window.confirm("Do you want to add another Employee?");
-        console.log(`decision: ${decision}`);
-        if (decision === true) {
-          prompt(firstName);
-        } else {
-          return Employee;
-        }
-      }
+    allEmployees.push(Employee);
+    //This will prompt is the user wants to add another employee
+    decision = window.confirm("Do you want to add another Employee?");
+    if (decision = true) {
+
     }
-  }//This will add all the information put into 
-  console.log(Employee);
+    console.log(`decision: ${decision}`);
+    console.log(Employee);
+  }
+
+  return allEmployees;
 }
 
 
@@ -48,7 +41,7 @@ const collectEmployees = function () {
 
 //creates the employee object
 //push employee object to employees array
-//ask if they want to add a new eomployee
+//ask if they want to add a new employee
 //if yes repeat
 //if no return employees array
 
@@ -65,28 +58,17 @@ const displayAverageSalary = function (employeesArray) {
   }
 }
 //All the employee's average salary will be displayed and recorded in the Javascript
-displayAverageSalary(); 
+displayAverageSalary();
 
 // TODO: Select and display a random employee
 // This will select a random employee
 const getRandomEmployee = function (employeesArray) {
-  function selectRandomEmployee(employees) {
-    var randomIndex = Math.floor(Math.random() * employees.length);
-    return employees[randomIndex];
-  }
-// This will generate a random employee with their information their inputed
-  function displayRandomEmployee(employees){
-    var randomEmployee = selectRandomEmployee(employees);
-    alert( "Random employee selected " + randomEmployee);
- }  
+  console.log(employeesArray);
+  // This will generate a random employee with their information their inputed
+  var random = employeesArray[Math.floor(Math.random() * employeesArray.length)];
+  console.log(random);
 
-var employees = []
-
-//This displays random employee chosen
-displayRandomEmployee(employees);
 }
-
-getRandomEmployee();
 
 /*
   ====================
