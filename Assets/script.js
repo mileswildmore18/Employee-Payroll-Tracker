@@ -26,19 +26,16 @@ const collectEmployees = function () {
         let decision = prompt("Do you want to add another Employee?");
         console.log(Employee);
         if (decision) {
-          prompt(firstName); 
-         } else {              
+          prompt(firstName);
+        } else {
           return;
         }
       }
     }
   }//This will add all the information put into 
-console.log(firstName);
-console.log(lastName);
-console.log(salary);
-  
+  console.log(Employee);
 }
-    
+
 
 collectEmployees();
 
@@ -60,15 +57,38 @@ collectEmployees();
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
-  var average = calculateAverage(employeeArray);
-
+  function calculateAverage(salaries) {
+    var total = 0;
+    for (var i = 0; i < salaries.length; i++) {
+      total += salaries[i];
+    }
+    var average = displayAverage(salaries);
+    alert("Average salary: " + average.toFixed(2)); //This will display average with two decimal places
+  }
 }
-displayAverage(employeesArray);
 
-// Select a random employee
+displayAverageSalary(); //All the employee's average salary will be displayed and recorded in the Javascript
+
+// TODO: Select and display a random employee
+// This will select a random employee
 const getRandomEmployee = function (employeesArray) {
-  // TODO: Select and display a random employee
+  function selectRandomEmployee(employees) {
+    var randomIndex = Math.floor(Math.random() * employees.length);
+    return employees[randomIndex];
+  }
+// This will generate a random employee with their information their inputed
+  function displayRandomEmployee(employees){
+    var randomEmployee = selectRandomEmployee(employees);
+    alert( "Random employee selected " + randomEmployee);
+ }  
+
+var employees = []
+
+//This displays random employee chosen
+displayRandomEmployee(employees);
 }
+
+getRandomEmployee();
 
 /*
   ====================
