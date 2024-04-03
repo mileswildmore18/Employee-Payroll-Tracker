@@ -9,26 +9,21 @@ const collectEmployees = function () {
     //User input will be the first name, last name and the salary
     const firstName = prompt("Enter First Name");
     const lastName = prompt("Enter Last Name");
-    const Salary = prompt("Enter salary");
-    let Employee = {
+    const salary = prompt("Enter salary");
+    let employee = {
       firstName: firstName,
       lastName: lastName,
-      salary: Salary
+      salary: salary
     };
+    
 
-    allEmployees.push(Employee);
     //This will prompt is the user wants to add another employee
     decision = window.confirm("Do you want to add another Employee?");
-    if (decision = true) {
-
+    
     }
-    console.log(`decision: ${decision}`);
-    console.log(Employee);
-  }
-
   return allEmployees;
-}
-
+  }
+  
 
 
 
