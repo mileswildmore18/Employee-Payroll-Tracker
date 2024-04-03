@@ -3,33 +3,50 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function () {
-//User input will be the first name, last name and the salary
+  //User input will be the first name, last name and the salary
   let Employee = {
-};
+  };
 
-//This will prompt for the user to enter their first name
-    let firstName = prompt("Employee First Name", "First Name"); 
-    Employee.fName = firstName;
-    console.log(Employee);
-    if(firstName != null || firstName != "") {
+  //This will prompt for the user to enter their first name
+  let firstName = prompt("Employee First Name", "First Name");
+  Employee.fName = firstName;
+  console.log(Employee);
+  if (firstName != null || firstName != "") {
     //This will prompt the user for their last name
-      let lastName = prompt("Employee Last Name", "Last Name");
-      Employee.lName = lastName;
-      console.log(Employee);
-      if (lastName != null || lastName != "") {
+    let lastName = prompt("Employee Last Name", "Last Name");
+    Employee.lName = lastName;
+    console.log(Employee);
+    if (lastName != null || lastName != "") {
       //This will prompt for their salary
-        let salary = prompt("Employee Salary", "Salary");
-        Employee.sal = salary;
+      let salary = prompt("Employee Salary", "Salary");
+      Employee.sal = salary;
+      console.log(Employee);
+      if (salary != null || salary != "") {
+        //This will prompt is the user wants to add another employee
+        let decision = prompt("Do you want to add another Employee?");
         console.log(Employee);
-        if (salary != null || salary != "") {
-          //This will prompt is the user wants to add another employee
-          let decision = prompt ("Do you want to add another Employee?");
+        if (decision) {
+          prompt(firstName); 
+         } else {              
+          return;
         }
-      }}}
-
+      }
+    }
+  }//This will add all the information put into 
+console.log(firstName);
+console.log(lastName);
+console.log(salary);
   
+}
+    
 
-  // TODO: Get user input to create and return an array of employee objects
+collectEmployees();
+
+
+
+
+
+// TODO: Get user input to create and return an array of employee objects
 //prompt users for employee first name - store response in variable
 //prompts user for employee last name - store response in variable
 //prompts users for employee salary - store response in variable
@@ -41,12 +58,15 @@ const collectEmployees = function () {
 //if no return employees array
 
 // Display the average salary
-const displayAverageSalary = function(employeesArray) {
+const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
+  var average = calculateAverage(employeeArray);
+
 }
+displayAverage(employeesArray);
 
 // Select a random employee
-const getRandomEmployee = function(employeesArray) {
+const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
 }
 
@@ -57,7 +77,7 @@ const getRandomEmployee = function(employeesArray) {
 */
 
 // Display employee data in an HTML table
-const displayEmployees = function(employeesArray) {
+const displayEmployees = function (employeesArray) {
   // Get the employee table
   const employeeTable = document.querySelector('#employee-table');
 
@@ -71,20 +91,20 @@ const displayEmployees = function(employeesArray) {
     const currentEmployee = employeesArray[i];
 
     const newTableRow = document.createElement("tr");
-//Append adds the first name of the Employee into the currentEmployee section
+    //Append adds the first name of the Employee into the currentEmployee section
     const firstNameCell = document.createElement("td");
     firstNameCell.textContent = currentEmployee.firstName;
     newTableRow.append(firstNameCell);
-//Append adds the last name of the Employee into the currentEmployee section
+    //Append adds the last name of the Employee into the currentEmployee section
     const lastNameCell = document.createElement("td");
     lastNameCell.textContent = currentEmployee.lastName;
     newTableRow.append(lastNameCell);
 
     const salaryCell = document.createElement("td");
     // Format the salary as currency
-    salaryCell.textContent = currentEmployee.salary.toLocaleString("en-US",{
-      style:"currency",
-      currency:"USD"
+    salaryCell.textContent = currentEmployee.salary.toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD"
     });
 
     newTableRow.append(salaryCell);
@@ -94,7 +114,7 @@ const displayEmployees = function(employeesArray) {
 }
 
 //All employees chosen will have their data collected
-const trackEmployeeData = function() {
+const trackEmployeeData = function () {
   const employees = collectEmployees();
 
   console.table(employees);
@@ -105,7 +125,7 @@ const trackEmployeeData = function() {
 
   getRandomEmployee(employees);
 
-  employees.sort(function(a,b) {
+  employees.sort(function (a, b) {
     if (a.lastName < b.lastName) {
       return -1;
     } else {
