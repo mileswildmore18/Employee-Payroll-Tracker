@@ -5,20 +5,26 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const collectEmployees = function () {
   const allEmployees = [];
   let decision = true;
+  var i = 0;
   while (decision) {
     //User input will be the first name, last name and the salary
+    console.log(i);
     const firstName = prompt("Enter First Name");
     const lastName = prompt("Enter Last Name");
-    const salary = prompt("Enter salary");
+    let salary = prompt("Enter salary");
+    if (isNaN(salary) || salary === null) {
+      salary = 0;
+    }
     let employee = {
       firstName: firstName,
       lastName: lastName,
       salary: salary
-    };
+    }
     
-
+    allEmployees.push(employee);
     //This will prompt is the user wants to add another employee
-    decision = window.confirm("Do you want to add another Employee?");
+    decision = confirm("Do you want to add another Employee?");
+    i++
     
     }
   return allEmployees;
@@ -48,7 +54,7 @@ const displayAverageSalary = function (employeesArray) {
     for (var i = 0; i < salaries.length; i++) {
       total += salaries[i];
     }
-    var average = displayAverage(salaries);
+    var average = calculateAverage(salaries);
     alert("Average salary: " + average.toFixed(2)); //This will display average with two decimal places
   }
 }
