@@ -23,12 +23,12 @@ const collectEmployees = function () {
       console.log(Employee);
       if (salary != null || salary != "") {
         //This will prompt is the user wants to add another employee
-        let decision = window.prompt("Do you want to add another Employee?");
-        console.log(Employee);
-        if (decision) {
+        let decision = window.confirm("Do you want to add another Employee?");
+        console.log(`decision: ${decision}`);
+        if (decision === true) {
           prompt(firstName);
         } else {
-          return;
+          return Employee;
         }
       }
     }
@@ -36,8 +36,6 @@ const collectEmployees = function () {
   console.log(Employee);
 }
 
-
-collectEmployees();
 
 
 
