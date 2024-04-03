@@ -66,8 +66,8 @@ const displayAverageSalary = function (employeesArray) {
     alert("Average salary: " + average.toFixed(2)); //This will display average with two decimal places
   }
 }
-
-displayAverageSalary(); //All the employee's average salary will be displayed and recorded in the Javascript
+//All the employee's average salary will be displayed and recorded in the Javascript
+displayAverageSalary(); 
 
 // TODO: Select and display a random employee
 // This will select a random employee
