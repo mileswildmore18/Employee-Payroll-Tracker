@@ -3,12 +3,29 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function () {
-let person = prompt("Employee First Name", "First Name")
-if (person != null) {
-  break;
-} else {
-  let person = prompt("Employee Last Name", "Last Name")
-}
+//User input will be the first name, last name and the salary
+  let Employee = {
+};
+
+//This will prompt for the user to enter their first name
+    let firstName = prompt("Employee First Name", "First Name"); 
+    Employee.fName = firstName;
+    console.log(Employee);
+    if(firstName != null || firstName != "") {
+    //This will prompt the user for their last name
+      let lastName = prompt("Employee Last Name", "Last Name");
+      Employee.lName = lastName;
+      console.log(Employee);
+      if (lastName != null || lastName != "") {
+      //This will prompt for their salary
+        let salary = prompt("Employee Salary", "Salary");
+        Employee.sal = salary;
+        console.log(Employee);
+        if (salary != null || salary != "") {
+          //This will prompt is the user wants to add another employee
+          let decision = prompt ("Do you want to add another Employee?");
+        }
+      }}}
 
   
 
@@ -50,15 +67,15 @@ const displayEmployees = function(employeesArray) {
   // Loop through the employee data and create a row for each employee
   for (let i = 0; i < employeesArray.length; i++) {
 
-    // Creating a currentEmployee variabe and setting it to the current employee from employeesArray
+    // Creating a currentEmployee variable and setting it to the current employee from employeesArray
     const currentEmployee = employeesArray[i];
 
     const newTableRow = document.createElement("tr");
-
+//Append adds the first name of the Employee into the currentEmployee section
     const firstNameCell = document.createElement("td");
     firstNameCell.textContent = currentEmployee.firstName;
     newTableRow.append(firstNameCell);
-
+//Append adds the last name of the Employee into the currentEmployee section
     const lastNameCell = document.createElement("td");
     lastNameCell.textContent = currentEmployee.lastName;
     newTableRow.append(lastNameCell);
