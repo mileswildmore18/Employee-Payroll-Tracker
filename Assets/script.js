@@ -8,22 +8,22 @@ const collectEmployees = function () {
   };
 
   //This will prompt for the user to enter their first name
-  let firstName = prompt("Employee First Name", "First Name");
+  let firstName = window.prompt("Employee First Name",);
   Employee.fName = firstName;
   console.log(Employee);
   if (firstName != null || firstName != "") {
     //This will prompt the user for their last name
-    let lastName = prompt("Employee Last Name", "Last Name");
+    let lastName = window.prompt("Employee Last Name",);
     Employee.lName = lastName;
     console.log(Employee);
     if (lastName != null || lastName != "") {
       //This will prompt for their salary
-      let salary = prompt("Employee Salary", "Salary");
+      let salary = window.prompt("Employee Salary",);
       Employee.sal = salary;
       console.log(Employee);
       if (salary != null || salary != "") {
         //This will prompt is the user wants to add another employee
-        let decision = prompt("Do you want to add another Employee?");
+        let decision = window.prompt("Do you want to add another Employee?");
         console.log(Employee);
         if (decision) {
           prompt(firstName);
