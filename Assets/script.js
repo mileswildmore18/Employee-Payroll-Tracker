@@ -5,10 +5,8 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const collectEmployees = function () {
   const allEmployees = [];
   let decision = true;
-  var i = 0;
   while (decision) {
     //User input will be the first name, last name and the salary
-    console.log(i);
     const firstName = prompt("Enter First Name");
     const lastName = prompt("Enter Last Name");
     let salary = prompt("Enter salary");
@@ -24,7 +22,6 @@ const collectEmployees = function () {
     allEmployees.push(employee);
     //This will prompt is the user wants to add another employee
     decision = confirm("Do you want to add another Employee?");
-    i++
     
     }
   return allEmployees;
@@ -49,15 +46,15 @@ const collectEmployees = function () {
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
-  function calculateAverage(salaries) {
-    var total = 0;
-    for (var i = 0; i < salaries.length; i++) {
-      total += salaries[i];
-    }
-    var average = calculateAverage(salaries);
-    alert("Average salary: " + average.toFixed(2)); //This will display average with two decimal places
+  //totalSalary = 0;
+  //for ( let i=0;i<employeesArray.length;i++){
+    //const currentEmployee = employeesArray[i];
+    //totalSalary += parseInt(currentEmployee.salary);
   }
-}
+  //let averageSalary -
+  //This will display average with two decimal places
+  
+
 //All the employee's average salary will be displayed and recorded in the Javascript
 displayAverageSalary();
 
