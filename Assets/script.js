@@ -10,6 +10,7 @@ const collectEmployees = function () {
     const firstName = prompt("Enter First Name");
     const lastName = prompt("Enter Last Name");
     let salary = prompt("Enter salary");
+    //Salary sets to 0 by default
     if (isNaN(salary) || salary === null) {
       salary = 0;
     }
@@ -19,11 +20,13 @@ const collectEmployees = function () {
       salary: salary
     }
     
+    //Saves information for all Employees entered
     allEmployees.push(employee);
     //This will prompt is the user wants to add another employee
     decision = confirm("Do you want to add another Employee?");
     
     }
+    //Returns the employees array
   return allEmployees;
   }
   
@@ -46,14 +49,15 @@ const collectEmployees = function () {
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
-  //totalSalary = 0;
-  //for ( let i=0;i<employeesArray.length;i++){
-    //const currentEmployee = employeesArray[i];
-    //totalSalary += parseInt(currentEmployee.salary);
+  totalSalary = 0;
+  for ( let i=0;i<employeesArray.length;i++){
+    const currentEmployee = employeesArray[i];
+    totalSalary += parseInt(currentEmployee.salary);
   }
-  //let averageSalary -
+  let averageSalary = totalSalary / employeesArray.length;
+  return averageSalary;
   //This will display average with two decimal places
-  
+}
 
 //All the employee's average salary will be displayed and recorded in the Javascript
 displayAverageSalary();
