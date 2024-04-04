@@ -5,6 +5,7 @@ I learned how to create prompt and confirm boxes to give messages of what to typ
 My project will help with creating forms and pop up windows for people to answer them before they move on.
 You can also see the information about the people who are recorded into the array when you inspect the console on Google Chrome, Mozilla Firefox, or Microsft Edge of your choice.
 
-![alt text](03-javascript-homework-console-demo.png)
+<img width="960" alt="03-javascript-homework-console-demo" src="https://github.com/mileswildmore18/Employee-Payroll-Tracker/assets/163462827/fb10ab28-92fe-4033-a626-edfc09380798">
+
 # Link
 https://github.com/mileswildmore18/Employee-Payroll-Tracker
