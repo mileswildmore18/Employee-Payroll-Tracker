@@ -8,4 +8,4 @@ You can also see the information about the people who are recorded into the arra
 <img width="960" alt="03-javascript-homework-console-demo" src="https://github.com/mileswildmore18/Employee-Payroll-Tracker/assets/163462827/fb10ab28-92fe-4033-a626-edfc09380798">
 
 # Link
-https://github.com/mileswildmore18/Employee-Payroll-Tracker
+https://mileswildmore18.github.io/Employee-Payroll-Tracker/
