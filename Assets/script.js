@@ -17,19 +17,19 @@ const collectEmployees = function () {
     let employee = {
       firstName: firstName,
       lastName: lastName,
-      salary: salary
+      salary: parseInt(salary)
     }
-    
+
     //Saves information for all Employees entered
     allEmployees.push(employee);
     //This will prompt is the user wants to add another employee
     decision = confirm("Do you want to add another Employee?");
-    
-    }
-    //Returns the employees array
-  return allEmployees;
+
   }
-  
+  //Returns the employees array
+  return allEmployees;
+}
+
 
 
 
@@ -50,7 +50,7 @@ const collectEmployees = function () {
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculates and display the average salary
   totalSalary = 0;
-  for (i=0;i<employeesArray.length;i++){
+  for (i = 0; i < employeesArray.length; i++) {
     const currentEmployee = employeesArray[i];
     totalSalary += parseInt(currentEmployee.salary);
   }
